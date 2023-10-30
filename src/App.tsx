@@ -1,7 +1,6 @@
 import React from "react";
-import { createGlobalStyle } from "styled-components";
-import { useRecoilValue } from "recoil";
-import ToDoList from "./ToDoList";
+import styled, { createGlobalStyle } from "styled-components";
+import ToDoList from "./components/ToDoList";
 
 const GlobalStyle = createGlobalStyle`
   /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -66,12 +65,19 @@ a {
 }
 `;
 
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  margin: 20px 0px; 
+  height:100vh;
+`;
+
 const App = () => {
   return (
-    <>
+    <Container>
       <GlobalStyle />
       <ToDoList />
-    </>
+    </Container>
   );
 };
 
