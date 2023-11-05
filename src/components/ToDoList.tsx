@@ -22,13 +22,16 @@ const ToDoWrapper = styled.div`
   }
 `;
 
+
+
 const ToDoList = () => {
   const toDos = useRecoilValue(toDoSelector);
+  console.log(toDos);
   const [category, setCategory] = useRecoilState(categoryState);
+
   const onInput = (event: React.FormEvent<HTMLSelectElement>) => {
     setCategory(event.currentTarget.value as any);
   };
-  console.log(toDos);  
   return (
     <ToDoWrapper>
       <h1>To Do</h1>
