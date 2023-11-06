@@ -1,5 +1,5 @@
 import React from "react";
-import { Categories, IToDo, toDoState } from "./atoms";
+import { Categories, IToDo, toDoState } from "../atoms";
 import { styled } from "styled-components";
 import { useSetRecoilState } from "recoil";
 
